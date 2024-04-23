@@ -7,17 +7,20 @@ import {
 } from 'class-validator';
 
 export class AuthDto {
+  @IsString()
   @IsEmail()
   @IsNotEmpty()
-  @IsString()
   email: string;
+
+  @IsString()
   @IsNotEmpty()
-  @IsString()
   password: string;
-  @IsOptional()
+
   @IsString()
+  @IsOptional()
   firstName?: string;
-  @IsOptional()
+
   @IsString()
+  @IsOptional()
   lastName?: string;
 }
